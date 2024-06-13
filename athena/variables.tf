@@ -4,12 +4,12 @@ variable "aws_region" {
 
 variable "log_bucket_name" {
   type    = string
-  default = "aws-waf-logs-16465462542"
+  default = "<your-log-bucket-name>"
 }
 
 variable "log_bucket_prefix" {
   type    = string
-  default = "AWSLogs/583086777388/WAFLogs/us-east-1/CreatedByALB-36139537e283231f"
+  default = "<your-log-bucket-prefix>"
 }
 
 variable "partition_length" {

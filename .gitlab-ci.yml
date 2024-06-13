@@ -1,0 +1,17 @@
+variables:
+  AWS_CLI_VERSION: 2.14.6
+  AWS_REGION: "us-east-1"
+  TERRAFORM_VERSION: 1.8.3
+  TERRAFORM_BACKEND_BUCKET: "<your-terraform-backend-bucket-name>"
+
+stages:
+  - Deploy Terraform Backend
+  - Syntaxe
+  - Deploy
+  - Destroy
+  - Destroy Terraform Backend
+
+include:
+  - local: ".templates.gitlab-ci.yml"
+  - local: "/terraform-backend/.gitlab-ci.yml"
+  - local: "/athena/.gitlab-ci.yml"
